@@ -5,7 +5,8 @@
   "main": "babelnet.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "jshint **.js && jscs --preset=google **.js"
+    "lint": "jshint **.js && jscs --preset=google **.js",
+    "browserify": "browserify -t brfs babelnet.js --standalone BabelNet -o babelnet_browser.js && uglifyjs babelnet_browser.js -o babelnet_browser.min.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,7 @@
   },
   "homepage": "https://github.com/tomayac/babelnet_js",
   "dependencies": {
-    "node-env-file": "^0.1.7",
+    "brfs": "^1.4.0",
     "request": "^2.57.0"
   }
 }

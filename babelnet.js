@@ -1,10 +1,15 @@
 'use strict';
 
 var request = require('request');
-var env = require('node-env-file');
 var fs = require('fs');
-if (fs.existsSync(__dirname + '/.env')) {
-  env(__dirname + '/.env');
+var env = fs.readFileSync(__dirname + '/.env', 'utf-8');
+if (env) {
+  var lines = env.split('\n');
+  lines.forEach(function(line) {
+    var key = line.split('=')[0];
+    var value = line.split('=')[1];
+    process.env[key] = decodeURIComponent(value);
+  });
 }
 
 var BabelNet = {
@@ -14,6 +19,7 @@ var BabelNet = {
   getSynsetIds: function(opts, callback) {
     var options = {
       json: true,
+      withCredentials: false,
       url: BabelNet.START_POINT + 'getSynsetIds' +
           '?word=' + encodeURIComponent(opts.word) +
           '&lang=' + encodeURIComponent(opts.language) +
@@ -32,6 +38,7 @@ var BabelNet = {
   getSynset: function(opts, callback) {
     var options = {
       json: true,
+      withCredentials: false,
       url: BabelNet.START_POINT + 'getSynset' +
           '?id=' + encodeURIComponent(opts.synsetId) +
           '&key=' + BabelNet.KEY
@@ -47,6 +54,7 @@ var BabelNet = {
   getSenses: function(opts, callback) {
     var options = {
       json: true,
+      withCredentials: false,
       url: BabelNet.START_POINT + 'getSenses' +
           '?word=' + encodeURIComponent(opts.word) +
           '&lang=' + encodeURIComponent(opts.language) +
@@ -65,6 +73,7 @@ var BabelNet = {
   getSynsetIdsFromWikipediaTitle: function(opts, callback) {
     var options = {
       json: true,
+      withCredentials: false,
       url: BabelNet.START_POINT + 'getSynsetIdsFromWikipediaTitle' +
           '?word=' + encodeURIComponent(opts.word) +
           '&lang=' + encodeURIComponent(opts.language) +
@@ -82,6 +91,7 @@ var BabelNet = {
   getEdges: function(opts, callback) {
     var options = {
       json: true,
+      withCredentials: false,
       url: BabelNet.START_POINT + 'getEdges' +
           '?id=' + encodeURIComponent(opts.synsetId) +
           '&key=' + BabelNet.KEY

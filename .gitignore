@@ -1,4 +1,6 @@
 .DS_Store
 .env
 .jshintrc
+babelnet_browser.js
+babelnet_browser.min.js
 /node_modules

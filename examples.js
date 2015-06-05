@@ -1,6 +1,6 @@
 'use strict';
 
-var BabelNet = require('./babelnet.js');
+var BabelNet = BabelNet || require('./babelnet.js');
 
 BabelNet.getSynsetIds({
   word: 'apple',
@@ -9,7 +9,7 @@ BabelNet.getSynsetIds({
   if (err) {
     throw(err);
   }
-  console.log(results);
+  console.log(JSON.stringify(results));
 });
 
 BabelNet.getSynset({
@@ -18,7 +18,7 @@ BabelNet.getSynset({
   if (err) {
     throw(err);
   }
-  console.log(results);
+  console.log(JSON.stringify(results));
 });
 
 BabelNet.getSenses({
@@ -28,7 +28,7 @@ BabelNet.getSenses({
   if (err) {
     throw(err);
   }
-  console.log(results);
+  console.log(JSON.stringify(results));
 });
 
 BabelNet.getSynsetIdsFromWikipediaTitle({
@@ -39,7 +39,7 @@ BabelNet.getSynsetIdsFromWikipediaTitle({
   if (err) {
     throw(err);
   }
-  console.log(results);
+  console.log(JSON.stringify(results));
 });
 
 BabelNet.getEdges({
@@ -48,5 +48,5 @@ BabelNet.getEdges({
   if (err) {
     throw(err);
   }
-  console.log(results);
+  console.log(JSON.stringify(results));
 });
