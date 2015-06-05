@@ -8,7 +8,9 @@ if (env) {
   lines.forEach(function(line) {
     var key = line.split('=')[0];
     var value = line.split('=')[1];
-    process.env[key] = decodeURIComponent(value);
+    if (key === 'KEY') {
+      process.env[key] = decodeURIComponent(value);
+    }
   });
 }
 
