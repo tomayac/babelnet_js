@@ -1,0 +1,29 @@
+{
+  "name": "babelnet.js",
+  "version": "0.0.1",
+  "description": "JavaScript wrapper for BabelNet™",
+  "main": "babelnet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "jshint **.js && jscs --preset=google **.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomayac/babelnet_js.git"
+  },
+  "keywords": [
+    "BabelNet",
+    "Node",
+    "JavaScript"
+  ],
+  "author": "Thomas Steiner <steiner.thomas@gmail.com> (http://blog.tomayac.com/)",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/tomayac/babelnet_js/issues"
+  },
+  "homepage": "https://github.com/tomayac/babelnet_js",
+  "dependencies": {
+    "node-env-file": "^0.1.7",
+    "request": "^2.57.0"
+  }
+}

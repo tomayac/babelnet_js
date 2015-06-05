@@ -1,0 +1,4 @@
+.DS_Store
+.env
+.jshintrc
+/node_modules
