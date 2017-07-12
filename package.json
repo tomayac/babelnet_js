@@ -1,6 +1,6 @@
 {
   "name": "babelnet.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JavaScript wrapper for BabelNet™",
   "main": "babelnet.js",
   "scripts": {
@@ -24,7 +24,11 @@
   },
   "homepage": "https://github.com/tomayac/babelnet_js",
   "dependencies": {
-    "brfs": "^1.4.0",
-    "request": "^2.57.0"
+    "brfs": "^1.4.3",
+    "request": "^2.81.0"
+  },
+  "engines": {
+    "node": "4.8.x",
+    "npm": "2.15.x"
   }
 }
