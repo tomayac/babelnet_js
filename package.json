@@ -1,6 +1,6 @@
 {
-  "name": "babelnet.js",
-  "version": "0.0.2",
+  "name": "babelnet",
+  "version": "0.0.3",
   "description": "JavaScript wrapper for BabelNet™",
   "main": "babelnet.js",
   "scripts": {
