@@ -1,6 +1,6 @@
 {
   "name": "babelnet",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "JavaScript wrapper for BabelNet™",
   "main": "babelnet.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "request": "^2.81.0"
   },
   "engines": {
-    "node": "4.8.x",
-    "npm": "2.15.x"
+    "node": ">=4.8.x",
+    "npm": ">=2.15.x"
   }
 }
