@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/tomayac/babelnet_js",
   "dependencies": {
-    "brfs": "^1.4.3",
+    "brfs": "^2.0.2",
     "request": "^2.81.0"
   },
   "engines": {
